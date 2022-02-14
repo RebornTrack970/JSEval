@@ -16,7 +16,7 @@ public class JSEval extends Plugin {
                  String output = mods.getScripts().runConsole(args[0]);
                  player.sendMessage("> " + (isError(output) ? "[#ff341c]" + output : output));
             } else {
-                 Call.sendMessage(player.name + " [JS]: "+ args);
+                 Call.sendMessage(player.name + " [JS]: "+ args[0]);
                  String output = mods.getScripts().runConsole(args[0]);
                  player.sendMessage("> " + (isError(output) ? "[#ff341c]" + output : output));
             }
