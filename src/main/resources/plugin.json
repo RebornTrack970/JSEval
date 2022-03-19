@@ -1,0 +1,7 @@
+{
+    "name": "novk",
+    "description": "no votekicking",
+    "author": "RTOmega",
+    "main": "novk.NOVK",
+    "version": "1.3"
+}
