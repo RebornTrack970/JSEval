@@ -12,14 +12,12 @@ public class JSEval extends Plugin {
     @Override
     public void registerClientCommands(CommandHandler handler) {
         handler.<Player>register("js", "<code...>", "Execute JavaScript code.", (args, player) -> {
-            if (player.admin) {
-                 String output = mods.getScripts().runConsole(args[0]);
-                 player.sendMessage("> " + (isError(output) ? "[#ff341c]" + output : output));
-            } else {
-                 Call.sendMessage(player.name + " [JS]: "+ args[0]);
-                 String output = mods.getScripts().runConsole(args[0]);
-                 player.sendMessage("> " + (isError(output) ? "[#ff341c]" + output : output));
+            if (!player.admin) {
+                Call.sendMessage(player.name + " [JS]: " + args[0]);
             }
+
+            String output = mods.getScripts().runConsole(args[0]);
+            player.sendMessage("> " + (isError(output) ? "[#ff341c]" + output : output));
         });
     }
 
