@@ -7,7 +7,7 @@ import mindustry.mod.*;
 import static mindustry.Vars.*;
 
 @SuppressWarnings("unused")
-public class JSEval extends Plugin {
+public class Passadmin extends Plugin {
 
     @Override
     public void registerClientCommands(CommandHandler handler) {
